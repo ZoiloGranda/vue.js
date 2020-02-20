@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title></title>
+ </head>
+ <body>
+  <div id="app" class="container mt-5">
+   <div :class="['p-3','text-white', fondo]" >
+    <p>asdsad sajlkdjsa dsakjdlkasjdsalkdsa asdasdksakdoas asiduas8d7as98 d8as98dsadsad</p>
+    <p>asdsad sajlkdjsa dsakjdlkasjdsalkdsa asdasdksakdoas asiduas8d7as98 d8as98dsadsad</p>
+   </div>
+   <input type="text" class="form-control my-3" v-model="fondo">
+   <div class="text-white p-3" :class="{'bg-info':color, 'bg-success':!color}">
+    <p>Aplica la clase bg-info cuando color sea true</p>
+    <p>Aplica la clase bg-success cuando color sea false</p>
+   </div>
+   <button class="btn btn-primary" @click="color=!color">Cambiar</button>
+   
+  </div>
+  
+ </body>
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <script src="07.js"></script>
+</html>
