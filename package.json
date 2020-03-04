@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vue/cli": "^4.2.3",
     "http-server": "^0.12.1"
   }
 }
