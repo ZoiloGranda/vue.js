@@ -6,12 +6,12 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
   },
   {
     path: '/about',
-    name: 'About',
+    name: 'about',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
@@ -19,12 +19,12 @@ const routes = [
   },
   {
     path: '/servicios',
-    name: 'Servicios',
+    name: 'servicios',
     component: () => import(/* webpackChunkName: "servicios" */ '../views/Servicios.vue')
   },
   {
     path: '/fotos/:id',
-    name: 'Fotos',
+    name: 'fotos',
     component: () => import(/* webpackChunkName: "fotos" */ '../views/Fotos.vue')
   }
 ]
