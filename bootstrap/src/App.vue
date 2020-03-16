@@ -7,14 +7,17 @@
     <b-navbar-brand href="#">NavBar</b-navbar-brand>
     <b-collapse is-nav id="nav-collapse">
      <b-navbar-nav>
-        <b-nav-item :to="{name: 'Home'}" exact>Home</b-nav-item>
-        <b-nav-item :to="{name: 'About'}">About</b-nav-item>
-      </b-navbar-nav>
+      <b-nav-item :to="{name: 'Home'}" exact>Home</b-nav-item>
+      <b-nav-item :to="{name: 'About'}">About</b-nav-item>
+      <b-nav-item :to="{name: 'Grid'}">Grid</b-nav-item>
+     </b-navbar-nav>
     </b-collapse>
    </b-container>
   </b-navbar>
  </div>
- <router-view />
+ <b-container>
+  <router-view />
+ </b-container>
 </div>
 </template>
 
