@@ -1,58 +1,41 @@
 <template>
-  <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>open_in_new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-     <router-view/>
-    </v-content>
-  </v-app>
+<v-app>
+ <v-toolbar class="warning">
+  <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+  <v-toolbar-title>Vuetify</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <v-btn class="success">Ingreso</v-btn>
+    <v-btn class="error">Salir</v-btn>
+ </v-toolbar>
+ <v-navigation-drawer v-model="drawer" temporary dark>
+  <v-container mt-4>
+  <v-row >
+   <v-col justify="center" align="center">
+    <v-avatar><img src="https://cdn.icon-icons.com/icons2/1879/PNG/512/iconfinder-3-avatar-2754579_120516.png" alt=""></v-avatar>
+   </v-col>
+  </v-row>
+  <v-row>
+   <v-col justify="center" align="center">
+    <p class="white--text mt-3 headline">Juanito Perez</p>
+   </v-col>
+  </v-row>
+ </v-container>
+ </v-navigation-drawer>
+ <v-content>
+  <router-view />
+ </v-content>
+</v-app>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+ name: 'App',
 
-  components: {
-  },
+ components: {},
 
-  data: () => ({
-    //
-  }),
+ data: () => ({
+  drawer: true
+ }),
 };
 </script>
+ 
